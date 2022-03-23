@@ -9,15 +9,21 @@ const timer = () => {
   const currentTime = new Date();
 
   const date = currentTime.getTime();
-  const dateStop = new Date("1 january 2023").getTime();
+  // const dateStop = new Date("1 january 2023").getTime();
+  const dateStop = new Date("1 january" + (currentTime.getFullYear() + 1)).getTime();
+  // const dateStop = currentTime.toLocaleString("ru-RU");
   const timeRemaining = (dateStop - date) / 1000;
   const newYear = Math.floor(timeRemaining / 60 / 60 / 24);
+
+  console.log(newYear);
+
+  // console.log(dateStop);
 
   let hour = currentTime.getHours();
   let minutes = currentTime.getMinutes();
   let seconds = currentTime.getSeconds();
 
-  const dayOfWeek = new Date().toLocaleDateString("ru-RU", { weekday: "long" });
+  const dayOfWeek = currentTime.toLocaleDateString("ru-RU", { weekday: "long" });
 
   // const days = currentTime.getDay();
 
