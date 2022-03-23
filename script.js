@@ -9,7 +9,7 @@ const timer = () => {
   const currentTime = new Date();
 
   const date = currentTime.getTime();
-  const dateStop = new Date("1 january 2024").getTime();
+  const dateStop = new Date("1 january 2023").getTime();
   const timeRemaining = (dateStop - date) / 1000;
   const newYear = Math.floor(timeRemaining / 60 / 60 / 24);
 
